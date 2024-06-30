@@ -1532,6 +1532,19 @@ void CClient::ProcessServerPacket(CNetChunk *pPacket)
 			CMsgPacker Msg(NETMSG_PING_REPLY, true);
 			SendMsg(&Msg, 0);
 		}
+		else if(Msg == NETMSG_REDIRECT)
+		{
+			int RedirectPort = Unpacker.GetInt();
+			if(Unpacker.Error())
+			{
+				return;
+			}
+			char aAddr[NETADDR_MAXSTRSIZE];
+			NETADDR ServerAddr = *m_NetClient[CLIENT_MAIN].m_Connection.PeerAddress();
+			ServerAddr.port = RedirectPort;
+			net_addr_str(&ServerAddr, aAddr, sizeof(aAddr), true);
+			Connect(aAddr);
+		}
 		else if((pPacket->m_Flags&NET_CHUNKFLAG_VITAL) != 0 && Msg == NETMSG_RCON_CMD_ADD)
 		{
 			if (!Config()->m_ClDummy)

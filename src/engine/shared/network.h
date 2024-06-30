@@ -532,7 +532,6 @@ public:
 // client side
 class CNetClient : public CNetBase
 {
-	CNetConnection m_Connection;
 	CNetRecvUnpacker m_RecvUnpacker;
 
 	CNetTokenCache m_TokenCache;
@@ -541,6 +540,8 @@ class CNetClient : public CNetBase
 	int m_Flags;
 
 public:
+	CNetConnection m_Connection;
+
 	// openness
 	bool Open(NETADDR BindAddr, class CConfig *pConfig, class IConsole *pConsole, class IEngine *pEngine, int Flags);
 	void Close();
