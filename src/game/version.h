@@ -2,9 +2,9 @@
 /* If you are missing that file, acquire a complete release at teeworlds.com.                */
 #ifndef GAME_VERSION_H
 #define GAME_VERSION_H
-#define GAME_VERSION "0.7.5, 3.4"
+#define GAME_VERSION "0.7.5, 3.4.1"
 #define GAME_NETVERSION "0.7 802f1be60a05665f"
-#define CLIENT_VERSION 0x0f3040
+#define CLIENT_VERSION 0x0f3041
 #define PREV_CLIENT_VERSION 0x0f3031
 #define CLIENT_DDNET_VERSION 15050
 #define GAME_NAME "F-Client"
