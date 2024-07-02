@@ -98,7 +98,7 @@ set(CLIENT_EXECUTABLE F-Client CACHE STRING "Name of the build client executable
 
 find_package(Python3)
 if(DOWNLOAD_DEPENDENCIES)
-  if(Python3_EXECUTABLE AND TARGET_OS STREQUAL "windows" AND TARGET_BITS)
+  if(PYTHON_EXECUTABLE AND TARGET_OS STREQUAL "windows" AND TARGET_BITS)
     set(DOWNLOADS)
     foreach(d freetype sdl)
       if(NOT EXISTS "${PROJECT_SOURCE_DIR}/other/${d}/${TARGET_OS}/lib${TARGET_BITS}")
