@@ -96,6 +96,10 @@ set(CLIENT_EXECUTABLE F-Client CACHE STRING "Name of the build client executable
 # Download dependencies
 ########################################################################
 
+if(POLICY CMP0148)
+  cmake_policy(SET CMP0148 OLD)
+endif()
+
 find_package(PythonInterp)
 if(DOWNLOAD_DEPENDENCIES)
   if(PYTHON_EXECUTABLE AND TARGET_OS STREQUAL "windows" AND TARGET_BITS)
