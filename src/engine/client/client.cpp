@@ -670,6 +670,8 @@ void CClient::Connect(const char *pAddress)
 
 void CClient::DisconnectWithReason(const char *pReason)
 {
+	DummyDisconnect(pReason);
+
 	char aBuf[512];
 	str_format(aBuf, sizeof(aBuf), "disconnecting. reason='%s'", pReason?pReason:"unknown");
 	m_pConsole->Print(IConsole::OUTPUT_LEVEL_STANDARD, "client", aBuf);
@@ -724,8 +726,6 @@ void CClient::DisconnectWithReason(const char *pReason)
 
 void CClient::Disconnect()
 {
-	if (m_DummyConnected)
-		DummyDisconnect(0);
 	DisconnectWithReason(0);
 }
 
