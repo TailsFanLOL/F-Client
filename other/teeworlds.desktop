@@ -1,9 +1,9 @@
 [Desktop Entry]
-Name=Teeworlds
+Name=F-Client
 GenericName=Online multi-player 2D platform shooter
 Type=Application
 Terminal=false
-Exec=teeworlds
+Exec=F-Client
 Icon=teeworlds
-Comment=Teeworlds: Jumping the Gun
+Comment=Client mod for Teeworlds: Jumping the Gun
 Categories=Game;ArcadeGame;
