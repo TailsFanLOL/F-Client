@@ -263,13 +263,13 @@ public:
 		// 4) check for all default locations
 		{
 			const char *aDirs[] = {
-				"/usr/share/teeworlds/data",
-				"/usr/share/games/teeworlds/data",
-				"/usr/local/share/teeworlds/data",
-				"/usr/local/share/games/teeworlds/data",
-				"/usr/pkg/share/teeworlds/data",
-				"/usr/pkg/share/games/teeworlds/data",
-				"/opt/teeworlds/data"
+				"/usr/share/F-Client/data",
+				"/usr/share/games/F-Client/data",
+				"/usr/local/share/F-Client/data",
+				"/usr/local/share/games/F-Client/data",
+				"/usr/pkg/share/F-Client/data",
+				"/usr/pkg/share/games/F-Client/data",
+				"/opt/F-Client/data"
 			};
 			const int DirsCount = sizeof(aDirs) / sizeof(aDirs[0]);
 
